@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Creddinv Frontend Assignment
 
-## Getting Started
+This project is a frontend web application built as part of the Creddinv coding assignment.  
+The application demonstrates authentication, protected routes, product listing with filters, and a responsive UI built according to the provided Figma design.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔗 **Deployed Application:**  
+https://creddinv-assignment.vercel.app
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🔗 **GitHub Repository:**  
+https://github.com/<your-username>/creddinv-assignment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js (App Router)**
+- **React**
+- **SCSS Modules**
+- **Next.js Image Optimization**
+- **Google Font (Volkhov) via `next/font`**
+- **Vercel** for deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+### 1. Authentication
+- Login using email, password, and mobile number
+- API-based authentication
+- Token stored in `localStorage`
+- Inline error handling for invalid credentials
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Protected Routes
+- Product list page is protected
+- Unauthorized users are redirected to the login page
+- Token validity is verified using a validation API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Product Listing
+- Products fetched from the provided API
+- Displayed in a grid layout as per Figma design
+- Each product shows:
+  - Image (static placeholder)
+  - Product name
+  - Price
+
+### 4. Filters
+Users can filter products by:
+- **Size**
+- **Color**
+- **Price range**
+
+Multiple filters can be applied together.  
+A **Clear Filters** option is also provided.
+
+### 5. Responsive Design
+- Desktop: Sidebar + 3-column grid
+- Tablet: 2-column grid
+- Mobile: Single-column layout
+- Layout adapts smoothly across breakpoints
+
+---
+
+## 🎨 UI & Design Decisions
+
+- UI is implemented according to the provided Figma design
+- **Volkhov font** is applied globally to match the design
+- Brand name is treated as static UI content as it is not provided by the API
+- Product images are static placeholders since the API does not return image URLs
+
+---
+
+## 📁 Project Structure
+
+```txt
+src/
+ ├─ app/
+ │   ├─ login/
+ │   ├─ productlist/
+ │   ├─ page.js        # Redirects to /login
+ │   └─ layout.js      # Global layout & font
+ ├─ components/
+ │   ├─ ProductNavbar.jsx
+ │   └─ Footer.jsx
+ └─ styles/
+public/
+ └─ whiteTshirt.jpg
