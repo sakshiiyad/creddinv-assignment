@@ -7,7 +7,7 @@ export default function ProductNavbar() {
       <h1 className={styles.brand}>RALPH LAUREN</h1>
 
       <div className={styles.right}>
-        {/* search can come later */}
+       
       </div>
     </nav>
   )

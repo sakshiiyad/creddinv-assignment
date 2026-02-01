@@ -17,14 +17,14 @@ export default function LoginPage() {
 
     let newErrors = {}
 
-    // email validation
+    
     if (!email) {
       newErrors.email = 'Email is required'
     } else if (!/^\S+@\S+\.\S+$/.test(email)) {
       newErrors.email = 'Enter a valid email'
     }
 
-    // password validation
+    
     if (!password) {
       newErrors.password = 'Password is required'
     } else {
@@ -37,7 +37,7 @@ export default function LoginPage() {
       }
     }
 
-    // mobile validation
+    
     if (!mobile) {
       newErrors.mobile = 'Mobile number is required'
     } else if (!/^\d{10}$/.test(mobile)) {
@@ -49,7 +49,7 @@ export default function LoginPage() {
 
     if (Object.keys(newErrors).length > 0) return
 
-    //  LOGIN API CALL
+    //  login api call
     try {
       const response = await fetch(
         'https://coding-assignment-server.vercel.app/login',
