@@ -1,0 +1,21 @@
+.nav {
+  height: 72px;
+  padding: 0 40px;
+  background-color: #eef3f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand {
+  font-size: 34px;
+  font-weight: 500;
+  color:#484848;
+  letter-spacing: 1px;
+  position: absolute;
+  left:30px;
+
+ 
+  
+}

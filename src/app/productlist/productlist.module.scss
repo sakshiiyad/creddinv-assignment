@@ -1,0 +1,164 @@
+.page {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  padding: 32px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  border-right: 1px solid #e5e7eb;
+  padding-right: 24px;
+}
+
+.filterTitle {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.filterBlock {
+  margin-bottom: 24px;
+
+  p {
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+}
+
+/* SIZE */
+.sizeOptions {
+  display: flex;
+  gap: 8px;
+
+  button {
+    padding: 6px 12px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  /* ✅ FIX: higher specificity */
+  button.activeSize {
+    background-color: #111827;
+    color: #ffffff;
+    border-color: #111827;
+  }
+}
+
+
+.activeSize {
+  background-color: #091122;
+  color: #fff;
+  border-color: #111827;
+}
+
+/* COLORS */
+.colorOptions {
+  display: flex;
+  gap: 10px;
+
+  span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.red {
+  background: #ef4444;
+}
+.blue {
+  background: #3b82f6;
+}
+.green {
+  background: #22c55e;
+}
+
+.activeColor {
+  outline: 1.5px solid #111827;
+  outline-offset: 1px;
+}
+
+/* PRICE */
+.priceList {
+  list-style: none;
+  padding: 0;
+
+  li {
+    cursor: pointer;
+    padding: 6px 8px;
+    font-size: 14px;
+    color: #374151;
+    border-radius: 4px;
+  }
+
+  li:hover {
+    background-color: #f3f4f6;
+  }
+}
+
+.activePrice {
+  background-color: #e5e7eb;
+  color: #111827;
+  font-weight: 500;
+}
+
+/* CLEAR */
+.clearBtn {
+  margin-top: 16px;
+  padding: 8px 12px;
+  border: 1px solid #111827;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* PRODUCTS */
+.products {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  text-align: left;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+}
+
+.price {
+    color:#000000;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
